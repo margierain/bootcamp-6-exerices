@@ -12,7 +12,31 @@ def reverse(text):
 print reverse("abcd")
 
 # 2. Equilibrium
+def sort(my_list):
+    ''' this is a sorting function that returns the smallest to the largest value '''
+    size = len(my_list)
+    for i in range(size):
+        for j in range(size-i-1):
+            if(my_list[j] > my_list[j+1]) :
+                tmp = my_list[j]
+                my_list[j] = my_list[j+1]
+                my_list[j+1] = tmp
+    return my_list
 
+
+def function_solution(A):
+    '''this function utilizes the sort function above and return the values missing in a sequence'''
+    sorted_list = sort(A)
+    for i in range(len(sorted_list)-1):
+        if sorted_list[i+1] - sorted_list[i] != 1:
+            if sorted_list[i+1] < sorted_list[i]:
+                return sorted_list[i+1]+1
+            else:
+                return sorted_list[i]+1
+                
+# call the function                
+print function_solution([4,6,7,8])                
+ 
 
 
 #3.Number to words
