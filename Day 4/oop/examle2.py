@@ -1,6 +1,10 @@
 class Person(object):
 
     def __init__(self, fname, *args, **kwargs):
+        ''' Both *args and **kwags enables input other properties not specified in the __init__ method 
+        eg lname and age..  the difference is that args identififies properties using  positions (index)
+         and kwags uses keys just like dictonaries 
+         '''
         self.fname = fname
 
         if len(args) > 0:

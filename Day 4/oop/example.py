@@ -1,5 +1,5 @@
 class Animal(object):
-    ''' animal _count is a class property '''
+    ''' animal_count is a class property  that increases the number of animals'''
 
     animal_count = 0
     
@@ -12,6 +12,8 @@ class Animal(object):
         return "yes, I eat :)"
 
 class Cat(Animal):
+    ''' super method  in the child class Cat that inherits from Animal is used to 
+    enable inheritances  of all the methods in the parent class (in this case Animal) '''
 
     def __init__(self, name):
         super(Cat, self).__init__(name)
